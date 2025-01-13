@@ -133,7 +133,8 @@ class WatermarkProcessor(ProcessorComponent):
         config.bg_color = self.bg_color
 
         # 下方水印的占比
-        ratio = (.04 if container.get_ratio() >= 1 else .09) + 0.02 * config.get_font_padding_level()
+        # ratio = (.04 if container.get_ratio() >= 1 else .09) + 0.02 * config.get_font_padding_level()
+        ratio = (.022 if container.get_ratio() >= 1 else .06) + 0.02 * config.get_font_padding_level()
         # 水印中上下边缘空白部分的占比
         padding_ratio = (.52 if container.get_ratio() >= 1 else .7) - 0.04 * config.get_font_padding_level()
 
